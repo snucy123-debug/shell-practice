@@ -1,9 +1,11 @@
 #!/bin/bash
 
-PERSON1=AVINASH
-PERSON2=VARDHAN
+PERSON1=RAVI
+PERSON2=THARUN
 
 echo "$PERSON2: hi how are u bro"
-echo "$PERSON1: i am fine , had dinner vardhan ?"
-echo "$PERSON2 : No $PERSON1 have to eat mom is preparing"
-echo "$PERSON1: okay after having lunch call me  $PERSON2"
+echo "$PERSON1: i am fine , had dinner ?"
+echo "$PERSON2: No $PERSON1 have to eat mom is preparing"
+echo "$PERSON1: Okay have dinner and focus on your goals $PERSON2"
+echo "$PERSON2: Okay bro , i will try !
+        
