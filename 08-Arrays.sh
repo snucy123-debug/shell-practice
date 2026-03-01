@@ -2,8 +2,11 @@
 
 MOVIES=("DHURANDHAR" "KALKI-2" "RRR" "DOCIOT")
 
-echo "BLOCKBUSTER MOVIE IS $MOVIES(0)THIS MOVIE GOT A HUGE FAN BASE "
-echo "$MOVIES(1)ITS NOT YET RELEASED"
-echo "$MOVIES(2)FANTASTIC MOVIE"
+echo "BLOCKBUSTER {${MOVIES[1]} IS ${MOVIES[1]}THIS ${MOVIES[1]} GOT A HUGE FAN BASE "
+echo "${MOVIES[2]} ITS NOT YET RELEASED"
+echo "${MOVIES[3]}FANTASTIC${MOVIES[1]}"
 
-echo "Over all most of my favourite movies are $MOVIES(@)"
+echo "Over all most of my favourite MOVIES are {${MOVIES[@]}"
+
+
+#{ARRAY_NAME[index]}----for arrays we should use in this formate
