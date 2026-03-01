@@ -1,7 +1,7 @@
 #!/bin/bash
 
-PERSON1=RAVI #there should be no space
-PERSON2=THARUN
+PERSON1=$1 #there should be no space
+PERSON2=$2
 
 echo "$PERSON2: hi how are u bro"
 echo "$PERSON1: i am fine , had dinner ?"
