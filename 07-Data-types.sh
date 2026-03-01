@@ -1,9 +1,10 @@
 #!/bin/bash
 
-Number1=100
-Number2=693
+Number1=658645
+Number2=54
+echo "Give numbers $Number 
 
 SUM=$(($Number1+$Number2))
-echo "sum of Number1 and Number2 = $SUM"
+echo "sum of Number 1 and Number 2 = $SUM"
 
 # SO HERE "SUM "IS AN VARIABLE FOR "SUM OF NUMBER 1 AND NUMBER 2 "
