@@ -1,12 +1,13 @@
 #!/bin/bash
 
-RAINFALL=TRUE
+#Find the given number number less than 10 or not ?
 
-if [ $RAINFALL==TRUE ]
+NUMBER=$1|
+
+if [ $NUMBER -lt 10 ]
 then 
-     echo "Take umbrella and got out" 
+echo "Given number is lessthan 10"
 else
- echo "no need to take umbrella"
+echo "Given number is not lessthan 10"
 
-
- fi
+fi
