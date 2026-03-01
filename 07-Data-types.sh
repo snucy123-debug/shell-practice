@@ -2,7 +2,6 @@
 
 Number1=658645
 Number2=54
-echo "Give numbers $Number 
 
 SUM=$(($Number1+$Number2))
 echo "sum of Number 1 and Number 2 = $SUM"
