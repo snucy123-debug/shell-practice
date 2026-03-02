@@ -10,7 +10,5 @@ else
 echo "$NUMBER is not no greaterthan  65"
 fi
 
-# --------------------------------OUTPUT-------------------
-
-
-#9 is not no greaterthan  65
+# ------------------------------------OUTPUT-----------------------------------------------------
+# 9 is not no greaterthan  65
