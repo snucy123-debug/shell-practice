@@ -22,7 +22,7 @@ echo "my sql already installed"
 exit 1
 else
 echo "my  sql not yet installed will install now"
-
+fi
 #03►IF MYSQL NOT YET INSTALLED WILL INSTALL IT NOW.
 
 dnf install mysql
@@ -31,5 +31,4 @@ then
 echo "my sql installed sucessfully...."
 else
 echo "my sql not installed PLEASE TRY AGAIN..."
-fi
 fi
