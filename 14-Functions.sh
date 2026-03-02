@@ -22,10 +22,9 @@ then
 echo " $2 installing  sucessfully "
 else 
 echo " $2 insatting failure Please try again"
-
+fi
 }
-
-#MY SQL-
+#MY SQL
 dnf list installed mysql 
 if [ $? -nq 0 ]
 then
