@@ -33,10 +33,9 @@ dnf install mysql
  VALIDATE $? "mysql"
 else
     echo "my sql is already installed"
-    exit 1
+  
 fi
- 
-#NGINX
+
 dnf list installed nginx
 if [$? -ne 0 ]
 then echo "nginx not installed yes will it now"
