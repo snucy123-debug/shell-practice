@@ -12,7 +12,7 @@ echo "sucessfully ur with root acess please continue to install it "
 fi
 dnf list installed mysql #checking weather MYSQL already  installed or not ?
 
-if [ $? -nq 0 ]
+if [ $? -ne 0 ]
 then
 echo "MY SQL IS NOT INSTALLED GOING TO INSTALL IT NOW"
       #So if exit code ($?) is not equal to 0 then my sql not installed so check below.
