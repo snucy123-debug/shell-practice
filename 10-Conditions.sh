@@ -9,3 +9,8 @@ echo "$NUMBER is greaterthan  65"
 else
 echo "$NUMBER is not no greaterthan  65"
 fi
+
+# --------------------------------OUTPUT-------------------
+
+
+9 is not no greaterthan  65
