@@ -16,7 +16,7 @@ if [ $? -ne 0 ]
 then
 echo "MY SQL IS NOT INSTALLED GOING TO INSTALL IT NOW"
       #So if exit code ($?) is not equal to 0 then my sql not installed so check below.
-      dnf install mysql
+      dnf install mysql -y
       if [ $? -eq 0 ]
       then 
       echo "my sql installing sucessfully..........."
