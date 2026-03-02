@@ -26,7 +26,7 @@ fi
 }
 #MY SQL
 dnf list installed mysql 
-if [ $? -nq 0 ]
+if [ $? -ne 0 ]
 then
   echo "so mysql is not installed will install it now"
 else
