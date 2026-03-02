@@ -6,6 +6,7 @@ USERID=$(id -u) # 1st we check weatcher user using root access or not ?
 if [ $USERID -ne 0 ]
 then
 echo "To MYSQL  installation please use in root access"
+exit 1
 else
 echo "sucessfully ur in root acess please continue to install"
 fi
@@ -22,6 +23,6 @@ echo "MY SQL IS INSTALLING NOT INSTALLED GOING TO INSTALL IT NOW"
       echo "my sql installing sucessfully..........."
       else
       echo "ERROR!! My sql not installing...........please try again"
-      
+
       fi
 
