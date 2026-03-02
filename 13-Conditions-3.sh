@@ -22,5 +22,6 @@ echo "MY SQL IS INSTALLING NOT INSTALLED GOING TO INSTALL IT NOW"
       echo "my sql installing sucessfully..........."
       else
       echo "ERROR!! My sql not installing...........please try again"
-      fi
       
+      fi
+
