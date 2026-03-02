@@ -19,7 +19,7 @@ dnf list installed mysql
 if[ $? -eq 0 ]
 then
 echo "my sql already installed"
-exit
+exit 1
 else
 echo "my  sql not yet installed will install now"
 
