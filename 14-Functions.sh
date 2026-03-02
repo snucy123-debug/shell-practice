@@ -31,6 +31,7 @@ then
   echo "so mysql is not installed will install it now"
 else
     echo "my sql is already installed"
+    exit 1
  dnf install mysql 
  VALIDATE $? "MYSQL"
  fi
