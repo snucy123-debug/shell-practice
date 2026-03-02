@@ -33,7 +33,7 @@ else
     echo "my sql is already installed"
     exit 1
  dnf install mysql 
- VALIDATE $? "MYSQL"
+ VALIDATE $? "mysql"
  fi
  
 
