@@ -34,7 +34,7 @@ dnf install mysql
 else
     echo "my sql is already installed"
     exit 1
- fi
+
  
 #NGINX
 dnf list installed nginx
