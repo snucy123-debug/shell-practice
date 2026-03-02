@@ -8,9 +8,8 @@ then
 echo "FOR MYSQL  installation please use in root access"
 exit 1
 else
-echo "sucessfully ur with root acess please continue to install"
+echo "sucessfully ur with root acess please continue to install it "
 fi
-
 dnf list installed mysql #checking weather MYSQL already  installed or not ?
 
 if [ $? -nq 0 ]
