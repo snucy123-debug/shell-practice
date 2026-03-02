@@ -8,7 +8,7 @@ if [ $USERID -ne 0 ]
 then
 echo "please use root access"
 else
-echo "Yes !!! youu were in root acess please continue..."
+echo "Yes !!! you were in root acess please continue..."
 fi
 
 #02► CHECK WEATHER MY SQL IS ALREADY INSTALLED OR NOT ?.
@@ -19,11 +19,14 @@ then
 echo "my sql already installed"
 else
 echo "my  sql not yet iinstalled will install now"
+
+#03►IF MYSQL NOT YET INSTALLED WILL INSTALL IT NOW.
+
 dnf install mysql
 if [ $? -eq 0 ]
 then 
 echo "my sql installed sucessfully...."
 else
-echo "my sql not installed"
+echo "my sql not installed PLEASE TRY AGAIN..."
 fi
 fi
