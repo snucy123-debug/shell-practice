@@ -16,7 +16,7 @@ fi
 #02► CHECK WEATHER MY SQL IS ALREADY INSTALLED OR NOT ?.
 
 dnf list installed mysql
-if[ $? -eq 0 ]
+if [ $? -eq 0 ]
 then
 echo "my sql already installed"
 exit 1
