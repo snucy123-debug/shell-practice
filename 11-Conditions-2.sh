@@ -2,7 +2,7 @@
 
 USERID=$(id-u) # Here we use $() to store the command date so we use it.“Run this command and store its OUTPUT”
 
-if ( $USERID -ne 0 )
+if  [ $USERID -ne 0 ]  # Here we use [] for in conditions to text 
 
 then
     echo "SORRY!!! YOUR NOT RUNNING IN ROOT ACCESS SO PLEASE USE SUDO SU"
