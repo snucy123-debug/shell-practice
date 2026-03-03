@@ -10,8 +10,8 @@ NO="e\[0m"
 
 USERID=$(id -u)
 if [ $USERID -eq 0 ] 
-then echo -e "$G you were running with root  access please continue $NO " 
-else echo  -e "\e[31m" "you were not running with root access please use root access $NO "
+then echo -e "$G you were running with root  access please continue $NO" 
+else echo  -e "$R you were not running with root access please use root access $NO"
 exit 1
 fi
 
