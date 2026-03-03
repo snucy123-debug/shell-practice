@@ -2,11 +2,10 @@
 
 #►COLORS
 
-
-G="e\[32m"
-R="e\[31m"
-M="e\[35m"
-NO="e\[0m"
+G="\e[32m"
+R="\e[31m"
+M="\e[35m"
+NO="\e[0m"
 
 USERID=$(id -u)
 if [ $USERID -eq 0 ] 
