@@ -1,7 +1,6 @@
 #!?bin/bash
 
 #►COLORS
-
 G="\e[32m"
 R="\e[31m"
 M="\e[35m"
@@ -9,7 +8,7 @@ NO="\e[0m"
 
 USERID=$(id -u)
 if [ $USERID -eq 0 ] 
-then echo -e "$G you were running with root  access please continue $NO" 
+then echo -e "\e[31;42m" "you were running with root  access please continue $NO" 
 else echo  -e "$R you were not running with root access please use root access $NO"
 exit 1
 fi
@@ -31,12 +30,10 @@ if [ $? -eq 0 ] #So here if exit code = 0 then it just paste my sql is installed
                 #so if  its not there down of that it will other command and it will not run"
 then
   echo -e " $M my sql is already installed"
-  exit 1
 else
     echo -e "$R my sql not installed will install it $NO "
     dnf install mysql 
     VALIDATE $? "mysql"
-  
 fi
 
 dnf list installed nginx
