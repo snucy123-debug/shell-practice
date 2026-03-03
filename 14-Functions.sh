@@ -9,8 +9,8 @@
 
 USERID=$(id -u)
 if [ $USERID -eq 0 ] 
-then echo "you were running with root  access please continue" -e \e[31m
-else echo "you were not running with root access please use root access"
+then echo "you were running with root  access please continue" 
+else echo  -e "\e[31m" "you were not running with root access please use root access"
 exit 1
 fi
 
