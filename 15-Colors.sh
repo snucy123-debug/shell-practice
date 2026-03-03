@@ -29,7 +29,7 @@ if [ $? -eq 0 ] #So here if exit code = 0 then it just paste my sql is installed
                 #then it will  instll it simple  the function validate should be down of not installed command because it works
                 #so if  its not there down of that it will other command and it will not run"
 then
-  echo -e "$MAGENTA my sql is already installed $NO"
+  echo -e " $MAGENTA my sql is already installed $NO "
   exit 1
 else
     echo -e "$RED my sql not installed $MAGENTA will install it $NO "
