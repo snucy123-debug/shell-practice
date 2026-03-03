@@ -2,25 +2,27 @@
 
 #►COLORS
 
-GREEN="e/[32m"
-RED="e/[31m"
-MAGENTA="e/[35m"
-NO="e/[0m"
+
+G="e\[32m"
+R="e\[31m"
+M="e\[35m"
+NO="e\[0m"
+
 USERID=$(id -u)
 if [ $USERID -eq 0 ] 
-then echo "you were running with root  access please continue" 
-else echo  -e "\e[1;33;44m" you were not running with root access please use root access $NO "
+then echo -e "$G you were running with root  access please continue $NO " 
+else echo  -e "\e[31m" "you were not running with root access please use root access $NO "
 exit 1
 fi
-S
+
 #MAKING-FUNCTION
 
 VALIDATE() {
 if [ $1 -eq 0 ]   #so here $1,$2. are args soo it will be like $1=$?,$2=MYSQL,PYTHON3,NGINX.
 then 
-echo " $2 INSTALLED SUCCESSFULLLY "
+echo " $2 installing  sucessfully "
 else 
-echo " $2 INSTALLATION FAILED PLEASE TRY AGAIN"
+echo " $2 insatting failure Please try again"
 fi
 }
 #MY SQL
@@ -29,10 +31,10 @@ if [ $? -eq 0 ] #So here if exit code = 0 then it just paste my sql is installed
                 #then it will  instll it simple  the function validate should be down of not installed command because it works
                 #so if  its not there down of that it will other command and it will not run"
 then
-  echo -e " $MAGENTA my sql is already installed $NO "
+  echo -e " $M my sql is already installed"
   exit 1
 else
-    echo -e "$RED my sql not installed $MAGENTA will install it $NO "
+    echo -e "$R my sql not installed will install it $NO "
     dnf install mysql 
     VALIDATE $? "mysql"
   
@@ -40,9 +42,10 @@ fi
 
 dnf list installed nginx
 if [ $? -ne 0 ]
-then echo -e " $RED nginx not installed  $MAGENTA WILL INSTALL  IT NOW $NO "
+then echo -e "$R NOT INSTALLED WILL INSTALL IT NOW $NO "
 dnf install nginx
 VALIDATE $? "Nginx"
 else
-echo -e " $MAGENTA nginx already installed sucessfully...$NO "
+echo -e "$G NGINX INSTALLED SUCCESSFULLY $NO "
 fi
+
