@@ -18,9 +18,9 @@ fi
 VALIDATE() {
 if [ $1 -eq 0 ]   #so here $1,$2. are args soo it will be like $1=$?,$2=MYSQL,PYTHON3,NGINX.
 then 
-echo " $2 installing  sucessfully "
+echo "$G  $2 INSTALLATION SUCCESSFULL $NO "
 else 
-echo " $2 insatting failure Please try again"
+echo  " $R $2 INSTALLATION FAILURE $NO "
 fi
 }
 #MY SQL
@@ -29,7 +29,7 @@ if [ $? -eq 0 ] #So here if exit code = 0 then it just paste my sql is installed
                 #then it will  instll it simple  the function validate should be down of not installed command because it works
                 #so if  its not there down of that it will other command and it will not run"
 then
-  echo -e " $M my sql is already installed"
+  echo -e " $G MY SQL INSTALLED SUCCESSFUL"
 else
     echo -e "$R my sql not installed will install it $NO "
     dnf install mysql 
