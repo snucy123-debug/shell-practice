@@ -1,4 +1,6 @@
 #!/bin/bash
+# TO CREATE AWS INSTANCES-
+# aws ec2 run-instances --image-id ami-09c813fb71547fc4f --instance-type t2.micro --security-group-ids sg-01bc7ebe005fb1cb2 --tag-specifications "ResourceType=instance,Tags=[{Key=Name, Value=test}]" --query "Instances[0].PrivateIpAddress" --output text
 
 AMI_ID="ami-0220d79f3f480ecf5"
 SG_ID="sg-0cb7bc58080de4d99" # replace with your SG ID
@@ -21,8 +23,3 @@ do
     echo "$instance IP address: $IP"
 
    
-#----------------------------------------------------------------------------------------------------------------
-#    1. create instances
-# 	AMI ID, SG ID, SUBNET ID
-	
-# aws ec2 run-instances --image-id ami-09c813fb71547fc4f --instance-type t2.micro --security-group-ids sg-01bc7ebe005fb1cb2 --tag-specifications "ResourceType=instance,Tags=[{Key=Name, Value=test}]" --query "Instances[0].PrivateIpAddress" --output text
