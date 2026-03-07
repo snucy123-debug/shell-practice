@@ -9,7 +9,7 @@ DOMAIN_NAME="vkdevin.online" # replace with your domain
 for instance in ${INSTANCES[@]} #This is for install all instances
 #for instance in $@  #[it is for install instances  one by one or install whatever u need by giving its tname in linux server ]
 do
-    INSTANCE_ID=$(aws ec2 run-instances --image-id ami-09c813fb71547fc4f --instance-type t3.micro --security-group-ids sg-01bc7ebe005fb1cb2 --tag-specifications "ResourceType=instance,Tags=[{Key=Name, Value=$instance}]" --query "Instances[0].InstanceId" --output text)
+    INSTANCE_ID=$(aws ec2 run-instances --image-id "ami-0220d79f3f480ecf5 --instance-type t3.micro --security-group-ids sg-0cb7bc58080de4d99 --tag-specifications "ResourceType=instance,Tags=[{Key=Name, Value=$instance}]" --query "Instances[0].InstanceId" --output text)
     if [ $instance != "frontend" ]
     then
         IP=$(aws ec2 describe-instances --instance-ids $INSTANCE_ID --query "Reservations[0].Instances[0].PrivateIpAddress" --output text)
