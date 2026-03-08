@@ -14,7 +14,6 @@ echo "what is the home directory : $HOME"
 
 echo "PID of the script : $$"
 
-echo "Background PID OF PREVIOUS SCRIPT :$!"
 
 echo "SO ABOVE GIVEN INFORMATION IS ----SPECIAL-VARIABLES------"
 
@@ -30,3 +29,4 @@ what is the home directory : /home/ec2-user
 PID of the script : 55796
 SO ABOVE GIVEN INFORMATION IS ----SPECIAL-VARIABLES------
 
+1

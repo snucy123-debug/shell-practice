@@ -1,4 +1,4 @@
-#!?bin/bash
+#!/bin/bash
 
 #►COLORS
 G="\e[32m"

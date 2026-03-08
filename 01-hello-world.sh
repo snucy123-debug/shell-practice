@@ -1,30 +1,51 @@
 #!/bin/bash/
 
-USERID=$(id -u)
+#!/bin/bash
 
-if [ $USERID -ne 0 ]
-then
-    echo "ERROR:: Please run this script with root access"
-    exit 1 #give other than 0 upto 127
-else
-    echo "You are running with root access"
+#FUCNCTIONS 
+
+#function_name() {   ← Start function
+#   commands
+#}                   ← End function
+#---------------------------------------------------------------------------------------#
+
+USERID=$(id -u)
+if [ $USERID -eq 0 ] 
+then echo "you were running with root  access please continue" 
+else echo  -e "\e[31m" "you were not running with root access please use root access"
+exit 1
 fi
 
-dnf list installed mysql
+#MAKING-FUNCTION
 
-# check already installed or not. if Installed $? is 0, then 
-# If not installed $? is not 0. expression is true
-if [ $? -ne 0 ]
+VALIDATE() {
+if [ $1 -eq 0 ]   #so here $1,$2. are args soo it will be like $1=$?,$2=MYSQL,PYTHON3,NGINX.
+then 
+echo " $2 installing  sucessfully "
+else 
+echo " $2 insatting failure Please try again"
+fi
+}
+#MY SQL
+dnf list installed mysql 
+if [ $? -eq 0 ] #So here if exit code = 0 then it just paste my sql is installed ,if  it is not equal to 0 then
+                #then it will  instll it simple  the function validate should be down of not installed command because it works
+                #so if  its not there down of that it will other command and it will not run"
 then
-    echo "MySQL is not installed... going to install it"
-    dnf install mysql -y
-    if [ $? -eq 0 ]
-    then
-        echo "Installing MySQL is ... SUCCESS"
-    else
-        echo "Installing MySQL is ... FAILURE"
-        exit 1
-    fi
+  echo "my sql is already installed"
+  exit 1
 else
-    echo "MySQL is already installed...Nothing to do"
+    echo "my sql not installed will install it"
+    dnf install mysql 
+    VALIDATE $? "mysql"
+  
+fi
+
+dnf list installed nginx
+if [ $? -ne 0 ]
+then echo "nginx not installed yes will it now"
+dnf install nginx
+VALIDATE $? "Nginx"
+else
+echo "nginx already installed sucessfully..."
 fi

@@ -1,4 +1,8 @@
 #!/bin/bash
+
+PERSON1=AVI
+PERSON2=VARDHAN
+
 echo "me: hi how are u bro"
 echo "avi: i am fine , had dinner vardhan ?"
 echo "me : No avi have to eat mom is preparing"
